@@ -53,7 +53,7 @@ Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps 
   </div>
 }}
 
-To get started, you need an [access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/) and a [style URL](https://docs.mapbox.com/help/glossary/style-url/). You can choose from one of our [professionally designed styles](https://docs.mapbox.com/api/maps/#styles) or create your own using [Mapbox Studio](https://studio.mapbox.com/).
+To get started, you need an [access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/) and a [style URL](https://docs.mapbox.com/help/glossary/style/#style-urls). You can choose from one of our [professionally designed styles](https://docs.mapbox.com/api/maps/#styles) or create your own using [Mapbox Studio](https://studio.mapbox.com/).
 
 {{
 <Quickstart />
