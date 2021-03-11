@@ -11,17 +11,17 @@
     });
 
     map.on('load', function () {
-        map.addSource('10m-bathymetry-81bsvj', {
+        map.addSource('10m-bathymetry', {
             type: 'vector',
-            url: 'mapbox://mapbox.9tm8dx88'
+            url: 'mapbox://examples.bathy_z8'
         });
 
         map.addLayer(
             {
-                'id': '10m-bathymetry-81bsvj',
+                'id': '10m-bathymetry-id',
                 'type': 'fill',
-                'source': '10m-bathymetry-81bsvj',
-                'source-layer': '10m-bathymetry-81bsvj',
+                'source': '10m-bathymetry',
+                'source-layer': 'water-detail-v1',
                 'layout': {},
                 'paint': {
                     'fill-outline-color': 'hsla(337, 82%, 62%, 0)',
