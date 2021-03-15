@@ -165,16 +165,25 @@
             'type': 'vector',
             'url': 'mapbox://mapbox.04w69w5j'
         });
-        map.addLayer({
-            'id': 'airport',
-            'source': 'airports',
-            'source-layer': 'ne_10m_airports',
-            'type': 'symbol',
-            'layout': {
-                'icon-image': 'airport-15',
-                'icon-padding': 0,
-                'icon-allow-overlap': true
-            }
+        // Add an image to use as an icon.
+        map.loadImage('../assets/airplane-medium.png', function (error, image) {
+            if (error) throw error;
+            map.addImage('airplane-medium', image, { 'sdf': true });
+            map.addLayer({
+                'id': 'airport',
+                'source': 'airports',
+                'source-layer': 'ne_10m_airports',
+                'type': 'symbol',
+                'layout': {
+                    'icon-image': 'airplane-medium',
+                    'icon-padding': 0,
+                    'icon-allow-overlap': true
+                },
+                'paint': {
+                    'icon-halo-width': 5,
+                    'icon-halo-color': '#ffffff'
+                }
+            });
         });
 
         map.on('moveend', function () {

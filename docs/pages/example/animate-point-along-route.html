@@ -115,18 +115,27 @@
                 'line-color': '#007cbf'
             }
         });
-
-        map.addLayer({
-            'id': 'point',
-            'source': 'point',
-            'type': 'symbol',
-            'layout': {
-                'icon-image': 'airport-15',
-                'icon-rotate': ['get', 'bearing'],
-                'icon-rotation-alignment': 'map',
-                'icon-allow-overlap': true,
-                'icon-ignore-placement': true
-            }
+        // Add an image to use as an icon.
+        map.loadImage('../assets/airplane-large.png', function (error, image) {
+            if (error) throw error;
+            map.addImage('airplane-large', image, { 'sdf': true });
+            map.addLayer({
+                'id': 'point',
+                'source': 'point',
+                'type': 'symbol',
+                'layout': {
+                    'icon-image': 'airplane-large',
+                    'icon-rotate': ['get', 'bearing'],
+                    'icon-rotation-alignment': 'map',
+                    'icon-allow-overlap': true,
+                    'icon-ignore-placement': true
+                },
+                'paint': {
+                    'icon-color': '#007cbf',
+                    'icon-halo-width': 5,
+                    'icon-halo-color': '#ffffff'
+                }
+            });
         });
 
         function animate() {

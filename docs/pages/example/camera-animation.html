@@ -203,17 +203,24 @@
                 'coordinates': [-94, 40]
             }
         });
-        map.addLayer({
-            'id': 'center',
-            'type': 'symbol',
-            'source': 'center',
-            'layout': {
-                'icon-image': 'marker-15',
-                'text-field': 'Center: [-94, 40]',
-                'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-                'text-offset': [0, 0.6],
-                'text-anchor': 'top'
-            }
+        map.loadImage('../assets/marker-medium.png', function (error, image) {
+            if (error) throw error;
+            map.addImage('marker-medium', image);
+            map.addLayer({
+                'id': 'center',
+                'type': 'symbol',
+                'source': 'center',
+                'layout': {
+                    'icon-image': 'marker-medium',
+                    'text-field': 'Center: [-94, 40]',
+                    'text-font': [
+                        'Open Sans Semibold',
+                        'Arial Unicode MS Bold'
+                    ],
+                    'text-offset': [0, 0.6],
+                    'text-anchor': 'top'
+                }
+            });
         });
 
         var animateButton = document.getElementById('animateButton');

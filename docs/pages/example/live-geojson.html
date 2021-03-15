@@ -32,13 +32,17 @@
         }, 2000);
 
         map.addSource('drone', { type: 'geojson', data: url });
-        map.addLayer({
-            'id': 'drone',
-            'type': 'symbol',
-            'source': 'drone',
-            'layout': {
-                'icon-image': 'rocket-15'
-            }
+        map.loadImage('../assets/rocket-medium.png', function (error, image) {
+            if (error) throw error;
+            map.addImage('rocket-medium', image);
+            map.addLayer({
+                'id': 'drone',
+                'type': 'symbol',
+                'source': 'drone',
+                'layout': {
+                    'icon-image': 'rocket-medium'
+                }
+            });
         });
     });
 </script>
