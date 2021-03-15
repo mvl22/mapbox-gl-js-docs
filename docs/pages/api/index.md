@@ -238,7 +238,7 @@ var map = new mapboxgl.Map({
 });
 ```
 
-For a more detailed demo of using `testMode` with Selenium, check out our sample browser tests [here](https://github.com/mapbox/mapbox-gl-js/tree/main/test/browser).
+For a more detailed demo of using `testMode` with Selenium, [check out our sample browser tests](https://github.com/mapbox/mapbox-gl-js/tree/main/test/browser).
 
 ## CSP Directives
 
