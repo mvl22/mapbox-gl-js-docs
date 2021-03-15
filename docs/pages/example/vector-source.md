@@ -16,6 +16,6 @@ prependJs:
 - "import iframe from './vector-source.html?iframe';"
 ---
 
-Add a [vector source](/mapbox-gl-js/style-spec/sources/#vector) to a map.
+Add a [vector source](/mapbox-gl-js/style-spec/sources/#vector) to a map. Add any Mapbox-hosted tileset using its [tileset id](https://docs.mapbox.com/help/glossary/tileset-id/).
 
 {{ <Example html={html} iframeSrc={iframe} {...this.props} /> }}
