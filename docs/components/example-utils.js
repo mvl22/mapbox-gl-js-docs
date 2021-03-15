@@ -6,7 +6,7 @@ to generate the copyable code and iframe demo for each example.
 If you make changes to this file, you must restart Batfish (npm start) to see your changes.
 */
 
-const viewport = `<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />`;
+const viewport = `<meta name='viewport' content='width=device-width, initial-scale=1'>`;
 const css = `body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }`;
 const { version } = require('../../mapbox-gl-js/package.json');
@@ -26,9 +26,9 @@ function urls(options) {
 /* The <title></title> and (user) access token or place holder is set in example.js */
 function renderCopiableCode(html) {
     return `<!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
-<meta charset="utf-8" />
+<meta charset='utf-8' />
 <title></title>
 ${viewport}
 <link href='${urls().css}' rel='stylesheet' />
@@ -46,22 +46,22 @@ ${html}
 /* Generates a new HTML file to be used as the `src` in each example iframe */
 function renderIframe(html, MapboxAccessToken) {
     return `<!DOCTYPE html>
-  <html>
+  <html lang='en'>
   <head>
   <meta charset=utf-8 />
   <title>Mapbox GL JS example</title>
   ${viewport}
   <meta name='robots' content='noindex, nofollow' />
+  <style>
+  ${css}
+  </style>
+  </head>
+  <body>
   <link href='${urls({ local: true }).css}' rel='stylesheet' />
   <script src='https://js.sentry-cdn.com/b4e18cb1943f46289f67ca6a771bd341.min.js' crossorigin='anonymous'></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-instrumentile/v3.0.0/mapbox-gl-instrumentile.js' crossorigin="anonymous"></script>
   <script src='${urls({ local: true }).js}'></script>
-  <style>
-  ${css}
-  </style>
   <script>mapboxgl.accessToken = '${MapboxAccessToken}'</script>
-  </head>
-  <body>
   ${html}
   </body>
   <script>
