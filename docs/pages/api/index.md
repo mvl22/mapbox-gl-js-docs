@@ -116,7 +116,7 @@ Mapbox GL JS v2 is distributed as an ES6 compatible JavaScript bundle and is com
 
 ### Minimizing transpilation with browserlists
 
-* If you're using [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) in conjunction with [browserslist](https://github.com/browserslist/browserslist) in order to set target browser environments, consider using the following `browserslist` queries.
+* If you're using [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) in conjunction with [browserslist](https://github.com/browserslist/browserslist) in order to set target browser environments, consider using the following `browserslist` queries to select a set of compatible transforms.
 ```
 >0.2%, not dead, not ie 11, not chrome 49
 ```
