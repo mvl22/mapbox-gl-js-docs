@@ -134,7 +134,7 @@ This can be set in your project's `package.json` or in a `.browserslistrc` file.
 
 ### Excluding GL-JS explicitly from transpilation
 
-* If other parts of your application need ES5 transpilation, then consider excluding GL-JS explicitly from transpilation. If you are using Webpack, you can use the `!` prefix in the import statement to exclude mapbox-gl from being transformed by existing loaders. See Webpack loaders [inline usage docs](https://webpack.js.org/concepts/loaders/#inline) for more details.
+* If other parts of your application need ES5 transpilation, then consider excluding GL JS explicitly from transpilation. If you are using Webpack, you can use the `!` prefix in the import statement to exclude mapbox-gl from being transformed by existing loaders. See Webpack loaders [inline usage docs](https://webpack.js.org/concepts/loaders/#inline) for more details.
 
 ```js
 import mapboxgl from '!mapbox-gl';
