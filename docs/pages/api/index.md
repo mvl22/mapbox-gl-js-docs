@@ -120,9 +120,9 @@ To maximize performance and cut the bundle size roughly in half, the JavaScript 
 - Explicitly disable transpiling of the Mapbox GL JS bundle
 - Load and transpile Web Worker code separately at the cost of duplicating code shared with the main bundle.
 
-### Minimizing transpilation with browserlists
+### Minimizing transpilation with browserslist
 
-* If you're using [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) in conjunction with [browserslist](https://github.com/browserslist/browserslist) in order to set target browser environments, consider using the following `browserslist` queries to select a set of compatible transforms.
+* If you're using [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) in conjunction with [browserslist](https://github.com/browserslist/browserslist) to set target browser environments, consider using the following `browserslist` queries to select a set of compatible transforms.
 ```
 >0.2%, not dead, not ie 11, not chrome 49
 ```
@@ -130,7 +130,7 @@ To maximize performance and cut the bundle size roughly in half, the JavaScript 
 ```
 defaults, not ie 11
 ```
-This can be set in your project's `package.json` or in a `.browserslistrc` file. See [@babel/preset-env docs](https://babeljs.io/docs/en/babel-preset-env#browserslist-integration) for more details.
+This can be specified in your project's `package.json` or in a `.browserslistrc` file. See [@babel/preset-env docs](https://babeljs.io/docs/en/babel-preset-env#browserslist-integration) for more details.
 
 ### Excluding GL-JS explicitly from transpilation
 
@@ -154,7 +154,7 @@ use: {
   }
 }
 ```
-### Forcing Transpilation with Babel
+### Loading and transpiling the Web Worker separately
 
 If your application requires ES5 compatibility, then your module bundler needs to be configured to load and transpile Mapbox GL JS's Web Worker separately, at the cost of duplicating some code. Mapbox GL JS can be configured with bundler specific `worker-loader` plugins. See [webpack-worker-loader](https://webpack.js.org/loaders/worker-loader/) and [rollup-plugin-worker-loader](https://www.npmjs.com/package/rollup-plugin-web-worker-loader).
 
@@ -206,8 +206,8 @@ let map = new mapboxgl.Map({
 
 ## Writing Automated Tests
 
-Mapbox GL-JS can be incorporated into automated browser-based tests without the need for an access token by using the `testMode` option. The resulting `Map` instance does not produce visual output, but still loads locally hosted fixtures for styles and tiles and maintains full javascript API compatibility.
-This means that automated tests can excercise and assert state via the public API. This includes but is not limited to:
+Mapbox GL-JS can be incorporated into automated browser-based tests without the need for an access token by using the `testMode` option. The resulting `Map` instance does not produce visual output, but still loads locally hosted fixtures for styles and tiles and maintains full JavaScript API compatibility.
+This means that automated tests can exercise and assert state via the public API. This includes but is not limited to:
 * Listen for interaction events like `click`, `mouseover` etc on Layers.
 * Extract feature data with `map.queryRenderedFeatures()`.
 * Update view state `center`, `pitch`, `bearing`, `map.easeTo()`, `map.flyTo()` etc.
@@ -244,7 +244,7 @@ var map = new mapboxgl.Map({
 });
 ```
 
-For a more detailed demo of using `testMode` with Selenium, [check out our sample browser tests](https://github.com/mapbox/mapbox-gl-js/tree/main/test/browser).
+For a more detailed demo of using `testMode` with Selenium, [explore our sample browser tests](https://github.com/mapbox/mapbox-gl-js/tree/main/test/browser).
 
 ## CSP Directives
 

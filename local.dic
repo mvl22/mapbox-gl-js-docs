@@ -13,6 +13,7 @@ f0
 fn
 spritezero-cli
 pre-built
+preset-env
 mapbox-gl-js
 raster-dem
 geojson
@@ -23,13 +24,16 @@ ES6
 ES5
 Webpack
 Transpilation
+transpilation
 transpile
+transpiling
 WebWorker
 webpack-worker-loader
 rollup-plugin-worker-loader
 Mapillary
 bathymetry
 bezier
+browserslist
 Autoplay
 mapbox-gl-rtl-text
 precomposed
