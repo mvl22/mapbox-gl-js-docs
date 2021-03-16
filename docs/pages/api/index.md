@@ -114,7 +114,7 @@ Mapbox GL JS v2 is backwards-compatible and existing layers and APIs will contin
 
 Mapbox GL JS v2 is distributed as an ES6 compatible JavaScript bundle and is compatible with all major modern browsers.
 
-To maximize performance and cut the bundle size roughly in half, the JavaScript bundle shares code with the Web Worker it defines and is thus incompatible with some Babel transforms. If you are using v2 with a module bundler such as Webpack or Rollup along with a transpiler such as Babel, there are three recommended pathways: 
+To maximize performance and cut the bundle size roughly in half, the JavaScript bundle shares code with the Web Worker it defines, and is thus incompatible with some Babel transforms. If you are using v2 with a module bundler such as Webpack or Rollup along with a transpiler such as Babel, there are three recommended pathways:
 
 - Use `browserslist` to limit transpilation to a set of compatible transforms
 - Explicitly disable transpiling of the Mapbox GL JS bundle
@@ -156,7 +156,7 @@ use: {
 ```
 ### Forcing Transpilation with Babel
 
-If your application requires ES5 compatibility, then your module bundler needs to be configured to load and transpile Mapbox GL JS's Web Worker separately, at the cost of duplicating some code. Mapbox GL JS can be configured with bundler specific `worker-loader` plugins. (See. <a href="https://webpack.js.org/loaders/worker-loader/">webpack-worker-loader</a>) and [rollup-plugin-worker-loader](https://www.npmjs.com/package/rollup-plugin-web-worker-loader)).
+If your application requires ES5 compatibility, then your module bundler needs to be configured to load and transpile Mapbox GL JS's Web Worker separately, at the cost of duplicating some code. Mapbox GL JS can be configured with bundler specific `worker-loader` plugins. See [webpack-worker-loader](https://webpack.js.org/loaders/worker-loader/) and [rollup-plugin-worker-loader](https://www.npmjs.com/package/rollup-plugin-web-worker-loader).
 
 
 * If you are using Webpack, you can configure `worker-loader` to be used inline when importing mapbox-gl:
