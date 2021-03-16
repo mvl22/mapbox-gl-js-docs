@@ -156,7 +156,7 @@ use: {
 ```
 ### Forcing Transpilation with Babel
 
-If your application requires ES5 compatibility, then your module bundler needs to be configured to load and transpile Mapbox GL JS's WebWorker separately. Mapbox GL JS can be configured with bundler specific `worker-loader` plugins. (See. [webpack-worker-loader] (https://webpack.js.org/loaders/worker-loader/) and [rollup-plugin-worker-loader](https://www.npmjs.com/package/rollup-plugin-web-worker-loader)).
+If your application requires ES5 compatibility, then your module bundler needs to be configured to load and transpile Mapbox GL JS's Web Worker separately, at the cost of duplicating some code. Mapbox GL JS can be configured with bundler specific `worker-loader` plugins. (See. <a href="https://webpack.js.org/loaders/worker-loader/">webpack-worker-loader</a>) and [rollup-plugin-worker-loader](https://www.npmjs.com/package/rollup-plugin-web-worker-loader)).
 
 
 * If you are using Webpack, you can configure `worker-loader` to be used inline when importing mapbox-gl:
