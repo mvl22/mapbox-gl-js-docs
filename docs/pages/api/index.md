@@ -112,7 +112,13 @@ Mapbox GL JS v2 is backwards-compatible and existing layers and APIs will contin
 
 ## Transpiling v2
 
-Mapbox GL JS v2 is distributed as an ES6 compatible JavaScript bundle and is compatible with all major modern browsers. If you are using v2 with a module bundler such as Webpack or Rollup along with a transpiler such as Babel, its recommended to use minimal code transformation for maximum performance.
+Mapbox GL JS v2 is distributed as an ES6 compatible JavaScript bundle and is compatible with all major modern browsers.
+
+To maximize performance and cut the bundle size roughly in half, the JavaScript bundle shares code with the Web Worker it defines and is thus incompatible with some Babel transforms. If you are using v2 with a module bundler such as Webpack or Rollup along with a transpiler such as Babel, there are three recommended pathways: 
+
+- Use `browserslist` to limit transpilation to a set of compatible transforms
+- Explicitly disable transpiling of the Mapbox GL JS bundle
+- Load and transpile Web Worker code separately at the cost of duplicating code shared with the main bundle.
 
 ### Minimizing transpilation with browserlists
 
