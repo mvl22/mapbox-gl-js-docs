@@ -10,15 +10,20 @@
 <style>
     #geocoder {
         z-index: 1;
-        width: 100%;
+        width: auto;
         text-align: center;
-        top: 20px;
+        margin: 20px;
     }
     .mapboxgl-ctrl-geocoder {
         min-width: 100%;
     }
+    body {
+        background-color: silver;
+    }
 </style>
+
 <div id="geocoder"></div>
+
 <script>
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
