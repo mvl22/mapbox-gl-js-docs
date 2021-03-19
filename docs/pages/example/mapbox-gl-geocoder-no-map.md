@@ -21,6 +21,6 @@ This example uses the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-g
 
 No map appears in this example, but you can use the geocoder control to search for a place, and the control will return place results from the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
 
-Search for a place like _San Rafael_ to test the geocoder.
+Search for a place like _San Rafael_ to test the geocoder and see results.
 
 {{ <Example html={html} iframeSrc={iframe} {...this.props} /> }}
