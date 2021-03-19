@@ -1,6 +1,6 @@
 ---
 title: Set a point after Geocoder result
-description: Style a marker used to mark the location of the mapbox-gl-geocoder result.
+description: Style a marker used to mark the location of the mapbox-gl-geocoder search result.
 topics:
   - Geocoder
 thumbnail: point-from-geocoder-result

@@ -17,7 +17,7 @@ prependJs:
 - "import iframe from './mapbox-gl-geocoder-with-flyto.html?iframe';"
 ---
 
-This example uses camera animation options with the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) plugin to create a custom [`flyTo`](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto) animation when the user selects a search result returned by the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
+This example uses camera animation options with the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control to create a custom [`flyTo`](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto) animation when the user selects a search result returned by the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
 
 Search for a place like _Port-au-Prince_ to see the animation.
 

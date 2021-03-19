@@ -1,6 +1,6 @@
 ---
 title: Use a custom render function with a geocoder
-description: Use a custom HTML rendering function with the mapbox-gl-geocoder to customize the dropdown menu.
+description: Use a custom HTML rendering function with the mapbox-gl-geocoder control to customize the dropdown menu.
 topics:
   - Geocoder
 thumbnail: mapbox-gl-geocoder-custom-render
@@ -19,6 +19,6 @@ prependJs:
 
 This example uses a custom HTML rendering function to customize the dropdown menu for a geocoding control.
 
-It uses the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control plugin, which enables places search using the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
+It uses the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control, which enables places search using the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
 
 {{ <Example html={html} iframeSrc={iframe} {...this.props} /> }}

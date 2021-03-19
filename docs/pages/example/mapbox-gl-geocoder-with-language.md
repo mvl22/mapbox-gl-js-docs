@@ -1,6 +1,6 @@
 ---
 title: Localize the geocoder to a given language
-description: Localize the mapbox-gl-geocoder to set the UI language and improve result relevance in that language.
+description: Localize the mapbox-gl-geocoder control to set the UI language and improve result relevance in that language.
 topics:
   - Geocoder
 thumbnail: mapbox-gl-geocoder-with-language
