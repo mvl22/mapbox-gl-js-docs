@@ -17,6 +17,8 @@ prependJs:
 - "import iframe from './mapbox-gl-geocoder-custom-render.html?iframe';"
 ---
 
-Use a custom HTML rendering function with the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) to customize the dropdown menu.
+This example uses a custom HTML rendering function to customize the dropdown menu for a geocoding control.
+
+It uses the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control plugin, which enables places search using the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
 
 {{ <Example html={html} iframeSrc={iframe} {...this.props} /> }}

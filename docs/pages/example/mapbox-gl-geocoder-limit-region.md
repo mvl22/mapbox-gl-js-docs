@@ -17,6 +17,6 @@ prependJs:
 - "import iframe from './mapbox-gl-geocoder-limit-region.html?iframe';"
 ---
 
-Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control to search for places using Mapbox Geocoding API limiting results to a region.
+Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control to search for places using [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/), limiting results to a region.
 
 {{ <Example html={html} iframeSrc={iframe} {...this.props} /> }}

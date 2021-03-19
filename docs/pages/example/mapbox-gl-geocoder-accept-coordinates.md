@@ -17,6 +17,6 @@ prependJs:
 - "import iframe from './mapbox-gl-geocoder-accept-coordinates.html?iframe';"
 ---
 
-Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control to search for places using Mapbox Geocoding API and accept geographic coordinates.
+Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control plugin to search for places using the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/), and accept geographic [coordinates](https://docs.mapbox.com/help/glossary/lat-long) in the query.
 
 {{ <Example html={html} iframeSrc={iframe} {...this.props} /> }}

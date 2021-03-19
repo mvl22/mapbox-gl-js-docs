@@ -17,6 +17,8 @@ prependJs:
 - "import iframe from './mapbox-gl-geocoder-with-language.html?iframe';"
 ---
 
-Localize the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) to set the UI language and improve result relevance in that language.
+This example localizes the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control by setting the UI language and improving places search results relevant in that language.
+
+The `mapbox-gl-geocoder` plugin uses the [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/) to enable places search.
 
 {{ <Example html={html} iframeSrc={iframe} {...this.props} /> }}
